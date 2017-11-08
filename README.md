@@ -12,6 +12,30 @@ Robin Powered's presence module relies upon a unique user being in the space. Be
   - Lambda with Env vars
   - API Gateway
 
+## Manual Setup
+
+- Create Density Presence Bot on Robin Powered API
+- Login to AWS
+- Create Lambda function "Author from scratch"
+- Choose an existing Role - `lambda_basic_execution` IAM role
+- Create function
+- Change runtime to Python 2.7 and save
+- Scroll down to Environment Variables section and add in Environment Variables (noted in Env vars section below)
+- Save
+- Click Triggers
+- Add Trigger
+- Click the box and select API Gateway
+- Click "Enter Value" to clear out previous API names if they exist, and name it whatever you'd like
+- Click "Enter Value" to clear out previous Deployment stage if exists, and name it prod
+- Change Security to "Open"
+- Click Submit
+- Open up "details" and copy Invoke URL
+- Head to https://dashboard.density.io/#/dev/webhooks and add a new webhook with that Invocation URL
+- Run `./deploy.sh` below and follow the directions to deploy Lambda function
+
+You're all done! When people enter the space you specified in the Env vars, you'll see the presence of the Density Presence Bot.
+
+
 ### Lambda Env Vars
 
 | Env Variable | Description |
