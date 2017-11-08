@@ -6,15 +6,16 @@ Robin Powered's presence module relies upon a unique user being in the space. Be
 
 ## Requirements
 
-- Density Presence Bot user account on Robin Powered API (https://docs.robinpowered.com/docs/add-new-user-to-organization)
 - AWS CLI (https://aws.amazon.com/cli/)
-- Setup AWS components via: 
-  - Lambda with Env vars
-  - API Gateway
+
+## Infrastructure
+
+- Lambda with Env vars
+- API Gateway
 
 ## Manual Setup
 
-- Create Density Presence Bot on Robin Powered API
+- Create Density Presence Bot on Robin Powered API (https://docs.robinpowered.com/docs/add-new-user-to-organization) and save the `user_id`.
 - Login to AWS
 - Create Lambda function "Author from scratch"
 - Choose an existing Role - `lambda_basic_execution` IAM role
@@ -33,7 +34,7 @@ Robin Powered's presence module relies upon a unique user being in the space. Be
 - Head to https://dashboard.density.io/#/dev/webhooks and add a new webhook with that Invocation URL
 - Run `./deploy.sh` below and follow the directions to deploy Lambda function
 
-You're all done! When people enter the space you specified in the Env vars, you'll see the presence of the Density Presence Bot.
+You're all done! When people enter the space you specified in the Env vars, you'll see the presence of the Density Presence Bot in the Robin API.
 
 
 ### Lambda Env Vars
