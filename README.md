@@ -1,4 +1,4 @@
-# Density API & Robin Powered Presence Function
+# Robin Powered Presence
 
 Leverage Density API webhooks `current_count` data from a space to indicate whether a Robin Powered space is currently occupied.
 
