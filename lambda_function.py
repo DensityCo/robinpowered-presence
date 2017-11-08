@@ -7,7 +7,7 @@ import requests
 robin_space_id = os.environ['ROBIN_SPACE_ID']
 robin_user_id = os.environ['ROBIN_USER_ID']  # The Density Presence Bot user_id
 robin_api_token = os.environ['ROBIN_API_TOKEN']
-robin_session_ttl = 120  # TTL in seconds
+robin_session_ttl = 600  # TTL in seconds
 robin_base_url = "https://api.robinpowered.com/v1.0"
 robin_space_presence_endpoint = '{}/spaces/{}/presence'.format(robin_base_url, robin_space_id)
 
