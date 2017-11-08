@@ -6,6 +6,7 @@ import requests
 # Robin Powered configuration
 robin_space_id = os.environ['ROBIN_SPACE_ID']
 robin_user_id = os.environ['ROBIN_USER_ID']  # The Density Presence Bot user_id
+robin_api_token = os.environ['ROBIN_API_TOKEN']
 robin_session_ttl = 120  # TTL in seconds
 robin_base_url = "https://api.robinpowered.com/v1.0"
 robin_space_presence_endpoint = '{}/spaces/{}/presence'.format(robin_base_url, robin_space_id)
@@ -40,7 +41,7 @@ def send_presence_request():
     }
     headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Access-Token {}'.format(os.environ['API_TOKEN'])
+      'Authorization': 'Access-Token {}'.format(robin_api_token)
     }
     requests.post(
         robin_space_presence_endpoint,
@@ -57,7 +58,7 @@ def clear_presence_request():
     }
     headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Access-Token {}'.format(os.environ['ROBIN_API_TOKEN'])
+      'Authorization': 'Access-Token {}'.format(robin_api_token)
     }
     requests.delete(
         robin_space_presence_endpoint,
