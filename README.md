@@ -32,7 +32,7 @@ Robin Powered's presence module relies upon a unique user being in the space. Be
 - Click Submit
 - Open up "details" and copy Invoke URL
 - Head to https://dashboard.density.io/#/dev/webhooks and add a new webhook with that Invocation URL
-- Run `./deploy.sh` below and follow the directions to deploy Lambda function
+- Run `./deploy.sh` and follow the directions to deploy Lambda function
 
 You're all done! When people enter the space you specified in the Env vars, you'll see the presence of the Density Presence Bot in the Robin API.
 
