@@ -16,8 +16,9 @@ density_space_id = os.environ['DENSITY_SPACE_ID']
 
 
 def lambda_handler(event, context):
-    webhook_space_id = event.get('space_id')
-    current_count = event.get('count')
+    webhook = json.loads(event.get('body'))
+    webhook_space_id = webhook.get('space_id')
+    current_count = webhook.get('count')
 
     if webhook_space_id != density_space_id:
         return
