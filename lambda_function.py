@@ -57,7 +57,7 @@ def clear_presence_request():
     }
     headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Access-Token {}'.format(os.environ['API_TOKEN'])
+      'Authorization': 'Access-Token {}'.format(os.environ['ROBIN_API_TOKEN'])
     }
     requests.delete(
         robin_space_presence_endpoint,
