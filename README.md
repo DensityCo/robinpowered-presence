@@ -1,8 +1,6 @@
 # Density API & Robin Powered Presence Function
 
-Lambda function that receives a Density API webhook and posts to a Robin Powered space to update its presence.
-
-Robin Powered's presence module relies upon a unique user being in the space. Because our device is anonymous, we won't know the "User" who is present in the space. Therefore, you need to create a "Density Presence Bot" user and utilize that user_id for indicating presence. 
+Leverage Density API webhooks `current_count` data from a space to indicate whether a Robin Powered space is currently occupied.
 
 ## Requirements
 
@@ -14,6 +12,9 @@ Robin Powered's presence module relies upon a unique user being in the space. Be
 - API Gateway
 
 ## Manual Setup
+
+Robin Powered's presence module relies upon a unique user being in the space. Because our device is anonymous, we won't know the "User" who is present in the space. Therefore, you need to create a "Density Presence Bot" user and utilize that user_id for indicating presence. 
+
 
 - Create Density Presence Bot on Robin Powered API (https://docs.robinpowered.com/docs/add-new-user-to-organization) and save the `user_id`.
 - Login to AWS
